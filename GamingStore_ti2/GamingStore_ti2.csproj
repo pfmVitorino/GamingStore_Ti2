@@ -194,6 +194,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JogosController.cs" />
+    <Compile Include="Controllers\ListaController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -330,6 +331,8 @@
     <Content Include="Views\Jogos\Details.cshtml" />
     <Content Include="Views\Jogos\Edit.cshtml" />
     <Content Include="Views\Jogos\Index.cshtml" />
+    <Content Include="Views\Lista\Details.cshtml" />
+    <Content Include="Views\Lista\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
