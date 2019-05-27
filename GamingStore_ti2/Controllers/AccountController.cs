@@ -17,6 +17,7 @@ namespace GamingStore_ti2.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private JogosDB db = new JogosDB();
 
         public AccountController()
         {
@@ -68,6 +69,15 @@ namespace GamingStore_ti2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
+            // só este gestor é que tem acesso para edtirar, criar ,eliminar jogos da loja
+            // se pretender criar mais gestores será aqui....
+            if (model.Email== "Gestor@ipt.pt" && model.Password == "123") {
+
+                Session["Metodo"] = "";
+                
+                return RedirectToAction("index","Jogos");
+
+            }
             if (!ModelState.IsValid)
             {
                 return View(model);
